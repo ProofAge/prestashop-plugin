@@ -34,7 +34,7 @@ class ProofageSessionModuleFrontController extends ModuleFrontController
             $this->respond(503, ['error' => 'not_configured']);
         }
 
-        $gatekeeper = $this->module->gatekeeper();
+        $gatekeeper = $this->proofage()->gatekeeper();
         $cookie = $gatekeeper->cookie();
         $idCustomer = $gatekeeper->customerId();
         $link = $this->context->link;
@@ -62,9 +62,13 @@ class ProofageSessionModuleFrontController extends ModuleFrontController
             $result = $factory->verificationService()->start($request);
         } catch (RateLimitedException $e) {
             $this->respond(429, ['error' => 'rate_limited']);
+
+            return;
         } catch (ApiException $e) {
             $factory->logger()->warning('Could not create verification: HTTP ' . $e->getHttpStatus() . ' ' . $e->getMessage());
             $this->respond(502, ['error' => 'api_error', 'code' => $e->getErrorCode()]);
+
+            return;
         }
 
         if ($result->newToken !== null) {
@@ -88,5 +92,13 @@ class ProofageSessionModuleFrontController extends ModuleFrontController
         header('Cache-Control: no-store');
         echo json_encode($body);
         exit;
+    }
+
+    private function proofage(): Proofage
+    {
+        /** @var Proofage $module */
+        $module = $this->module;
+
+        return $module;
     }
 }

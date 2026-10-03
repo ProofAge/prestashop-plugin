@@ -83,6 +83,8 @@ class AdminProofageAjaxController extends ModuleAdminController
             $workspace = $factory->api()->getWorkspace();
         } catch (ApiException $e) {
             $this->json(['ok' => false, 'error' => $e->getMessage() . ($e->getHttpStatus() ? ' (HTTP ' . $e->getHttpStatus() . ')' : '')]);
+
+            return;
         }
         $fields = ['name', 'mode', 'flow_type', 'age_mode', 'age_threshold', 'wallet_first'];
         $this->json(['ok' => true, 'workspace' => array_intersect_key($workspace, array_flip($fields))]);

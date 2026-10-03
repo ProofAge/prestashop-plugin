@@ -25,7 +25,7 @@ class ProofageReturnModuleFrontController extends ModuleFrontController
     {
         parent::init();
         $factory = ServiceFactory::forShop((int) $this->context->shop->id);
-        $gatekeeper = $this->module->gatekeeper();
+        $gatekeeper = $this->proofage()->gatekeeper();
         $ref = (string) Tools::getValue('ref');
         $record = preg_match('/^[0-9a-f]{32}$/', $ref) ? $factory->verifications()->findByReturnRef($ref) : null;
 
@@ -54,10 +54,20 @@ class ProofageReturnModuleFrontController extends ModuleFrontController
 
     public function setMedia()
     {
-        parent::setMedia();
-        $this->module->gatekeeper()->registerAssets($this, $this->back, [
+        $result = parent::setMedia();
+        $this->proofage()->gatekeeper()->registerAssets($this, $this->back, [
             'returnMode' => $this->found && !$this->cookieMissing,
             'cookieMissing' => $this->cookieMissing,
         ]);
+
+        return $result;
+    }
+
+    private function proofage(): Proofage
+    {
+        /** @var Proofage $module */
+        $module = $this->module;
+
+        return $module;
     }
 }

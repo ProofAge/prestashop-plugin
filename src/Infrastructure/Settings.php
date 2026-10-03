@@ -102,7 +102,7 @@ final class Settings
     {
         if (!array_key_exists($key, $this->cache)) {
             $value = \Configuration::get($key, null, null, $this->idShop);
-            $this->cache[$key] = $value === false || $value === null ? '' : (string) $value;
+            $this->cache[$key] = $value === false ? '' : (string) $value;
         }
 
         return $this->cache[$key];

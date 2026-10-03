@@ -20,7 +20,7 @@ class ProofageStatusModuleFrontController extends ModuleFrontController
     public function postProcess()
     {
         $factory = ServiceFactory::forShop((int) $this->context->shop->id);
-        $gatekeeper = $this->module->gatekeeper();
+        $gatekeeper = $this->proofage()->gatekeeper();
         $cookie = $gatekeeper->cookie();
 
         $vid = $cookie->verificationId();
@@ -56,5 +56,13 @@ class ProofageStatusModuleFrontController extends ModuleFrontController
         header('Cache-Control: no-store');
         echo json_encode($body);
         exit;
+    }
+
+    private function proofage(): Proofage
+    {
+        /** @var Proofage $module */
+        $module = $this->module;
+
+        return $module;
     }
 }

@@ -19,7 +19,7 @@ class ProofageGateModuleFrontController extends ModuleFrontController
     {
         parent::init();
         $requested = (string) Tools::getValue('back');
-        $this->back = $this->module->gatekeeper()->safeBack($requested);
+        $this->back = $this->proofage()->gatekeeper()->safeBack($requested);
         if ($requested !== '' && $this->back !== $requested) {
             // PrestaShop echoes the request URL into the page (canonical, og:url, JS config): drop the off-site value.
             Tools::redirect($this->context->link->getModuleLink('proofage', 'gate', [], true));
@@ -29,7 +29,7 @@ class ProofageGateModuleFrontController extends ModuleFrontController
     public function initContent()
     {
         parent::initContent();
-        $gatekeeper = $this->module->gatekeeper();
+        $gatekeeper = $this->proofage()->gatekeeper();
         if ($gatekeeper->isVerified()) {
             Tools::redirect($this->back);
         }
@@ -41,7 +41,17 @@ class ProofageGateModuleFrontController extends ModuleFrontController
 
     public function setMedia()
     {
-        parent::setMedia();
-        $this->module->gatekeeper()->registerAssets($this, $this->back);
+        $result = parent::setMedia();
+        $this->proofage()->gatekeeper()->registerAssets($this, $this->back);
+
+        return $result;
+    }
+
+    private function proofage(): Proofage
+    {
+        /** @var Proofage $module */
+        $module = $this->module;
+
+        return $module;
     }
 }

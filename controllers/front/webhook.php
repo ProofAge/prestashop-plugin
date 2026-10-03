@@ -29,6 +29,8 @@ class ProofageWebhookModuleFrontController extends ModuleFrontController
         } catch (Throwable $e) {
             $factory->logger()->warning('Webhook processing failed: ' . $e->getMessage());
             $this->respond(500, 'Processing failed');
+
+            return;
         }
 
         $this->respond($result->status, $result->message);
