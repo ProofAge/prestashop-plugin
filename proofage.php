@@ -37,7 +37,7 @@ class Proofage extends Module
     public function __construct()
     {
         $this->name = 'proofage';
-        $this->tab = 'front_office_features';
+        $this->tab = 'administration';
         $this->version = '1.0.0';
         $this->author = 'ProofAge';
         $this->need_instance = 0;
