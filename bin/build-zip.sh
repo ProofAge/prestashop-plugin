@@ -2,7 +2,7 @@
 # Builds build/proofage-<version>.zip ready for PrestaShop Addons.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-VERSION=$(php -r 'require "src/Support/ModuleInfo.php"; echo ProofAge\PrestaShop\Support\ModuleInfo::VERSION;')
+VERSION=$(php -r 'define("_PS_VERSION_", "9.0.0"); require "src/Support/ModuleInfo.php"; echo ProofAge\PrestaShop\Support\ModuleInfo::VERSION;')
 BUILD=build/proofage
 rm -rf build && mkdir -p "$BUILD"
 rsync -a --exclude-from=bin/zip-exclude.txt ./ "$BUILD/"

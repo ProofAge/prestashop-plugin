@@ -16,3 +16,4 @@ phpstan.neon
 composer.lock
 config_*.xml
 config.xml
+proofage_validation_*.txt
