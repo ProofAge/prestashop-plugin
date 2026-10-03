@@ -36,14 +36,8 @@ final class WebhookHandler
     /** @var Logger */
     private $logger;
 
-    public function __construct(
-        ?WebhookSignatureVerifier $verifier,
-        WebhookDeliveryRepository $deliveries,
-        VerificationRepository $verifications,
-        VerificationService $service,
-        Clock $clock,
-        Logger $logger
-    ) {
+    public function __construct(?WebhookSignatureVerifier $verifier, WebhookDeliveryRepository $deliveries, VerificationRepository $verifications, VerificationService $service, Clock $clock, Logger $logger)
+    {
         $this->verifier = $verifier;
         $this->deliveries = $deliveries;
         $this->verifications = $verifications;

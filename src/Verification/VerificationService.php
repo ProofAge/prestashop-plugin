@@ -40,15 +40,8 @@ final class VerificationService
     /** @var Logger */
     private $logger;
 
-    public function __construct(
-        VerificationApi $api,
-        VerificationRepository $verifications,
-        CustomerVerificationRepository $customers,
-        OrderSnapshotRepository $orders,
-        Clock $clock,
-        TtlPolicy $ttl,
-        Logger $logger
-    ) {
+    public function __construct(VerificationApi $api, VerificationRepository $verifications, CustomerVerificationRepository $customers, OrderSnapshotRepository $orders, Clock $clock, TtlPolicy $ttl, Logger $logger)
+    {
         $this->api = $api;
         $this->verifications = $verifications;
         $this->customers = $customers;
