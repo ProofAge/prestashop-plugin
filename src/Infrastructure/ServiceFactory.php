@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ProofAge\PrestaShop\Api\ApiClient;
 use ProofAge\PrestaShop\Api\CurlTransport;
 use ProofAge\PrestaShop\Api\RequestSigner;
