@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ProofAge Age Verification for PrestaShop
  *

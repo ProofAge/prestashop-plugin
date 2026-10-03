@@ -8,6 +8,8 @@ $config = new class() extends PrestaShop\CodingStandards\CsFixer\Config {
         return array_merge(parent::getRules(), [
             'trailing_comma_in_multiline' => ['elements' => ['arrays']],
             'method_argument_space' => ['on_multiline' => 'ignore'],
+            // The Addons validator wants the license docblock directly after the opening tag.
+            'blank_line_after_opening_tag' => false,
         ]);
     }
 };
