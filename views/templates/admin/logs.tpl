@@ -20,12 +20,12 @@
       <tbody>
         {foreach $proofage_verifications as $v}
           <tr>
-            <td><code>{$v->verificationId|escape:'htmlall':'UTF-8'}</code></td>
-            <td>{$v->status|escape:'htmlall':'UTF-8'}</td>
-            <td>{if $v->method}{$v->method|escape:'htmlall':'UTF-8'}{else}—{/if}</td>
-            <td>{if $v->idCustomer}#{$v->idCustomer|intval}{else}{l s='Guest' d='Modules.Proofage.Admin'}{/if}</td>
-            <td>{$v->createdAt|date_format:'%Y-%m-%d %H:%M'}</td>
-            <td>{if $v->decidedAt}{$v->decidedAt|date_format:'%Y-%m-%d %H:%M'}{else}—{/if}</td>
+            <td><code>{$v.verification_id|escape:'htmlall':'UTF-8'}</code></td>
+            <td>{$v.status|escape:'htmlall':'UTF-8'}</td>
+            <td>{if $v.method}{$v.method|escape:'htmlall':'UTF-8'}{else}—{/if}</td>
+            <td>{if $v.id_customer}#{$v.id_customer|intval}{else}{l s='Guest' d='Modules.Proofage.Admin'}{/if}</td>
+            <td>{$v.created_at|escape:'htmlall':'UTF-8'}</td>
+            <td>{if $v.decided_at}{$v.decided_at|escape:'htmlall':'UTF-8'}{else}—{/if}</td>
           </tr>
         {foreachelse}
           <tr><td colspan="6">{l s='No verifications yet.' d='Modules.Proofage.Admin'}</td></tr>

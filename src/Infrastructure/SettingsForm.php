@@ -10,7 +10,9 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+use ProofAge\PrestaShop\Support\DateFormat;
 use ProofAge\PrestaShop\Support\Input;
+use ProofAge\PrestaShop\Verification\VerificationRecord;
 
 final class SettingsForm
 {
@@ -139,11 +141,33 @@ final class SettingsForm
         return $helper->generateForm($this->forms());
     }
 
+    /**
+     * @param array<int,VerificationRecord> $records
+     *
+     * @return array<int,array<string,mixed>>
+     */
+    private function verificationRows(array $records): array
+    {
+        $rows = [];
+        foreach ($records as $record) {
+            $rows[] = [
+                'verification_id' => $record->verificationId,
+                'status' => $record->status,
+                'method' => $record->method,
+                'id_customer' => $record->idCustomer,
+                'created_at' => DateFormat::utc((int) $record->createdAt),
+                'decided_at' => $record->decidedAt ? DateFormat::utc((int) $record->decidedAt) : '',
+            ];
+        }
+
+        return $rows;
+    }
+
     public function renderLogs(): string
     {
         $factory = ServiceFactory::forShop($this->idShop);
         $this->context->smarty->assign([
-            'proofage_verifications' => $factory->verifications()->latest($this->idShop, 50),
+            'proofage_verifications' => $this->verificationRows($factory->verifications()->latest($this->idShop, 50)),
             'proofage_deliveries' => $factory->deliveries()->latest(50),
         ]);
 

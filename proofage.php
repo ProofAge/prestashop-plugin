@@ -18,6 +18,7 @@ use ProofAge\PrestaShop\Infrastructure\Installer;
 use ProofAge\PrestaShop\Infrastructure\OrderGuard;
 use ProofAge\PrestaShop\Infrastructure\ServiceFactory;
 use ProofAge\PrestaShop\Infrastructure\SettingsForm;
+use ProofAge\PrestaShop\Support\DateFormat;
 
 class Proofage extends Module
 {
@@ -156,7 +157,10 @@ class Proofage extends Module
     {
         $idOrder = isset($params['id_order']) ? (int) $params['id_order'] : 0;
         $snapshot = ServiceFactory::forShop((int) $this->context->shop->id)->orders()->find($idOrder);
-        $this->context->smarty->assign(['proofage_snapshot' => $snapshot]);
+        $this->context->smarty->assign([
+            'proofage_snapshot' => $snapshot,
+            'proofage_verified_at' => $snapshot !== null && $snapshot->verifiedAt !== null ? DateFormat::utc($snapshot->verifiedAt) : '',
+        ]);
 
         return $this->display(__FILE__, 'views/templates/hook/admin_order.tpl');
     }
@@ -168,6 +172,8 @@ class Proofage extends Module
         $verification = ServiceFactory::forShop($idShop)->customers()->find($idCustomer, $idShop);
         $this->context->smarty->assign([
             'proofage_customer_verification' => $verification,
+            'proofage_verified_at' => $verification !== null ? DateFormat::utc($verification->verifiedAt) : '',
+            'proofage_expires_at' => $verification !== null && $verification->expiresAt !== null ? DateFormat::utc($verification->expiresAt) : '',
             'proofage_customer_valid' => $verification !== null && $verification->isValidAt(time()),
             'proofage_reset_url' => $this->context->link->getAdminLink('AdminProofageAjax', true, [], ['proofage_action' => 'reset_customer', 'id_customer' => $idCustomer]),
         ]);

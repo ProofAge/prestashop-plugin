@@ -16,8 +16,8 @@
         <code>{$proofage_customer_verification->verificationId|escape:'htmlall':'UTF-8'}</code>
       </p>
       <p>
-        {l s='Verified at' d='Modules.Proofage.Admin'}: {$proofage_customer_verification->verifiedAt|date_format:'%Y-%m-%d %H:%M'}<br>
-        {l s='Expires' d='Modules.Proofage.Admin'}: {if $proofage_customer_verification->expiresAt}{$proofage_customer_verification->expiresAt|date_format:'%Y-%m-%d %H:%M'}{else}{l s='Never' d='Modules.Proofage.Admin'}{/if}
+        {l s='Verified at' d='Modules.Proofage.Admin'}: {$proofage_verified_at|escape:'htmlall':'UTF-8'}<br>
+        {l s='Expires' d='Modules.Proofage.Admin'}: {if $proofage_expires_at}{$proofage_expires_at|escape:'htmlall':'UTF-8'}{else}{l s='Never' d='Modules.Proofage.Admin'}{/if}
       </p>
       <a class="btn btn-outline-danger btn-sm" href="{$proofage_reset_url|escape:'htmlall':'UTF-8'}">{l s='Reset verification' d='Modules.Proofage.Admin'}</a>
     {else}

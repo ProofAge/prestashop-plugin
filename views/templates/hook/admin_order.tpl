@@ -28,7 +28,7 @@
           <dt class="col-sm-4">{l s='Method' d='Modules.Proofage.Admin'}</dt>
           <dd class="col-sm-8">{if $proofage_snapshot->method == 'wallet'}{l s='Digital identity wallet' d='Modules.Proofage.Admin'}{else}{l s='Face or document' d='Modules.Proofage.Admin'}{/if}</dd>
           <dt class="col-sm-4">{l s='Verified at' d='Modules.Proofage.Admin'}</dt>
-          <dd class="col-sm-8">{$proofage_snapshot->verifiedAt|date_format:'%Y-%m-%d %H:%M'}</dd>
+          <dd class="col-sm-8">{$proofage_verified_at|escape:'htmlall':'UTF-8'}</dd>
         {/if}
       </dl>
     {/if}
