@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface OrderSnapshotRepository
 {
     public function save(OrderSnapshot $snapshot): void;

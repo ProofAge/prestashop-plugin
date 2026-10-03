@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use PrestaShop\PrestaShop\Core\Module\Exception\ModuleErrorInterface;
 
 /**

@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Guards against late or replayed status updates: final statuses never change,
  * except an approval that ProofAge later revokes (approved -> declined).

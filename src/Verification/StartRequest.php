@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class StartRequest
 {
     /** @var int */

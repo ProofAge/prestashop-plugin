@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ProofAge\PrestaShop\Rules\CategoryLookup;
 
 final class DbCategoryLookup implements CategoryLookup

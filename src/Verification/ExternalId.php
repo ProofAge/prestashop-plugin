@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class ExternalId
 {
     public static function forCustomer(int $idShop, int $idCustomer): string

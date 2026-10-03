@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Api;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class ApiClient implements VerificationApi
 {
     /** @var HttpTransport */

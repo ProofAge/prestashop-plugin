@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Api;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 interface HttpTransport
 {
     /**

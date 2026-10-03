@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Support;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class NullLogger implements Logger
 {
     public function warning(string $message): void

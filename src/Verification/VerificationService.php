@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ProofAge\PrestaShop\Api\ApiException;
 use ProofAge\PrestaShop\Api\VerificationApi;
 use ProofAge\PrestaShop\Support\Clock;

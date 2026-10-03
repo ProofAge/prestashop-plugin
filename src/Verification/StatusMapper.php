@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Verification;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Maps raw ProofAge statuses to the states the storefront acts on.
  */

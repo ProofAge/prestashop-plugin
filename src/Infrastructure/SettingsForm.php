@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ProofAge\PrestaShop\Support\DateFormat;
 use ProofAge\PrestaShop\Support\Input;
 use ProofAge\PrestaShop\Verification\VerificationRecord;

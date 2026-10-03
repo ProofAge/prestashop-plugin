@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Rules;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class PageContext
 {
     public const TYPE_PRODUCT = 'product';

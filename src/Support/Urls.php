@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Support;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 final class Urls
 {
     public const DEFAULT_SDK_LOADER = 'https://app.proofage.xyz/sdk-build/kyc-loader.js';

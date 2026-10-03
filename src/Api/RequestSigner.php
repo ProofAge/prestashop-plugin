@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Api;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Signs ProofAge API requests: hex(hmac_sha256(METHOD + path[?query] + rawBody, secret)).
  */

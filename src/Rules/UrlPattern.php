@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Rules;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Case-insensitive path match where "*" matches any characters; slashes at both ends are ignored.
  */

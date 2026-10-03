@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Infrastructure;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 use ProofAge\PrestaShop\Verification\WebhookDeliveryRepository;
 
 final class DbWebhookDeliveryRepository implements WebhookDeliveryRepository

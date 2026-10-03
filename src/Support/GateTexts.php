@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Support;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Default gate texts written into the configuration at install time (merchants can edit them).
  */

@@ -9,6 +9,10 @@
 
 namespace ProofAge\PrestaShop\Rules;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 /**
  * Decides whether a product, cart or page needs a verified visitor.
  * The most specific rule wins; at the same level protection beats exclusion.

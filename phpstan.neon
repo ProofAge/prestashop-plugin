@@ -6,3 +6,5 @@ parameters:
         - src/Api
         - src/Rules
         - src/Verification
+    bootstrapFiles:
+        - tests/bootstrap.php
