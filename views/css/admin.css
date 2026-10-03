@@ -1,0 +1,11 @@
+/**
+ * ProofAge Age Verification for PrestaShop
+ * @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ */
+.proofage-picker__results { max-height: 240px; overflow-y: auto; margin: 4px 0 0; }
+.proofage-picker__results li { cursor: pointer; }
+.proofage-picker__selected { list-style: none; padding: 0; margin: 8px 0 0; }
+.proofage-picker__selected li { display: inline-block; margin: 0 6px 6px 0; padding: 2px 8px; border: 1px solid #ccc; border-radius: 3px; }
+.proofage-tabs { margin-bottom: 16px; }
+.proofage-workspace dt { float: left; clear: left; width: 160px; }
+.proofage-workspace dd { margin-left: 170px; }

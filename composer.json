@@ -1,0 +1,44 @@
+{
+    "name": "proofage/prestashop-module",
+    "description": "ProofAge age and identity verification for PrestaShop",
+    "type": "prestashop-module",
+    "license": "AFL-3.0",
+    "authors": [
+        {
+            "name": "Denis",
+            "email": "denis@proofage.net"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5",
+        "prestashop/php-dev-tools": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProofAge\\PrestaShop\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProofAge\\PrestaShop\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "prepend-autoloader": false,
+        "platform-check": false,
+        "sort-packages": true
+    },
+    "scripts": {
+        "build": "bin/build-zip.sh",
+        "test": [
+            "vendor/bin/phpunit",
+            "node --test tests/js/*.test.js"
+        ]
+    }
+}

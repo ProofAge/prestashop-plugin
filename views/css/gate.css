@@ -1,0 +1,53 @@
+/**
+ * ProofAge Age Verification for PrestaShop
+ * @license https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ */
+.proofage-gate {
+  max-width: 640px;
+  margin: 48px auto;
+  text-align: center;
+}
+.proofage-gate__title {
+  margin-bottom: 16px;
+}
+.proofage-gate__description {
+  margin-bottom: 24px;
+}
+.proofage-gate__status {
+  min-height: 1.5em;
+  margin-top: 16px;
+}
+.proofage-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+}
+.proofage-overlay__card {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 24px;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+body:has(.proofage-overlay) {
+  overflow: hidden;
+}
+body:has(.proofage-overlay) main,
+body:has(.proofage-overlay) #wrapper,
+body:has(.proofage-overlay) #header,
+body:has(.proofage-overlay) #footer {
+  filter: blur(14px);
+  pointer-events: none;
+  user-select: none;
+}

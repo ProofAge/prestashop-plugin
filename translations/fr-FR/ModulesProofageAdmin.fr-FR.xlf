@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="proofage" source-language="en" target-language="fr" datatype="plaintext">
+    <body>
+      <trans-unit id="c8f2e17ea1eb841e1d78e25986201dc9" approved="yes">
+        <source>ProofAge Age Verification</source>
+        <target state="final">ProofAge – Vérification de l'âge</target>
+      </trans-unit>
+      <trans-unit id="2b08255ca2d7d69ed8ddc6085578378d" approved="yes">
+        <source>Age and identity verification for products, categories and pages, powered by ProofAge.</source>
+        <target state="final">Vérification de l'âge et de l'identité pour les produits, catégories et pages, fournie par ProofAge.</target>
+      </trans-unit>
+      <trans-unit id="fd998e77a3e9beb3d0067e9f46fa0c4c" approved="yes">
+        <source>Protection is inactive: enter your ProofAge public and secret keys.</source>
+        <target state="final">La protection est inactive : saisissez vos clés publique et secrète ProofAge.</target>
+      </trans-unit>
+      <trans-unit id="9a7e58ee13cb727cb7c4acc68f4cafe5" approved="yes">
+        <source>Settings saved.</source>
+        <target state="final">Paramètres enregistrés.</target>
+      </trans-unit>
+      <trans-unit id="ddc565bfe3c221d598c73388d208a619" approved="yes">
+        <source>The public key must start with pk_test_ or pk_live_.</source>
+        <target state="final">La clé publique doit commencer par pk_test_ ou pk_live_.</target>
+      </trans-unit>
+      <trans-unit id="89704e0daae79c6e1e747d036a90c2f1" approved="yes">
+        <source>The secret key must start with sk_test_ or sk_live_.</source>
+        <target state="final">La clé secrète doit commencer par sk_test_ ou sk_live_.</target>
+      </trans-unit>
+      <trans-unit id="f9854c2289be9e3420dce245e6ca1c31" approved="yes">
+        <source>The public and secret keys must belong to the same mode (test or live).</source>
+        <target state="final">Les clés publique et secrète doivent appartenir au même mode (test ou live).</target>
+      </trans-unit>
+      <trans-unit id="138f52ed4e792f94d25c758167df15ea" approved="yes">
+        <source>The API URL must be an HTTPS address.</source>
+        <target state="final">L'URL de l'API doit être une adresse HTTPS.</target>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435" approved="yes">
+        <source>Yes</source>
+        <target state="final">Oui</target>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b" approved="yes">
+        <source>No</source>
+        <target state="final">Non</target>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354" approved="yes">
+        <source>Save</source>
+        <target state="final">Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="c2cc7082a89c1ad6631a2f66af5f00c0" approved="yes">
+        <source>Connection</source>
+        <target state="final">Connexion</target>
+      </trans-unit>
+      <trans-unit id="ed6445336472aef39084720adcf903b9" approved="yes">
+        <source>Public key</source>
+        <target state="final">Clé publique</target>
+      </trans-unit>
+      <trans-unit id="fa9f504dc6dd152baae823e9f8a54cb9" approved="yes">
+        <source>Starts with pk_test_ or pk_live_. Find it in your ProofAge workspace.</source>
+        <target state="final">Commence par pk_test_ ou pk_live_. Vous la trouverez dans votre espace de travail ProofAge.</target>
+      </trans-unit>
+      <trans-unit id="952bf87c967660b7bbd4e1eb08cefc92" approved="yes">
+        <source>Secret key</source>
+        <target state="final">Clé secrète</target>
+      </trans-unit>
+      <trans-unit id="02e3dbd874863ee18b463290d2e7a1a3" approved="yes">
+        <source>Starts with sk_test_ or sk_live_. Leave empty to keep the saved key.</source>
+        <target state="final">Commence par sk_test_ ou sk_live_. Laissez vide pour conserver la clé enregistrée.</target>
+      </trans-unit>
+      <trans-unit id="1f37743cdcdef44b3d80e8c166c6c3ce" approved="yes">
+        <source>API URL</source>
+        <target state="final">URL de l'API</target>
+      </trans-unit>
+      <trans-unit id="4c19a27e6c51f6c77b4f02ab278a09e0" approved="yes">
+        <source>Change only if ProofAge support asks you to.</source>
+        <target state="final">Ne modifiez ce champ que si le support ProofAge vous le demande.</target>
+      </trans-unit>
+      <trans-unit id="1f4da964f8eab62e96e8cfe406e44364" approved="yes">
+        <source>Rules</source>
+        <target state="final">Règles</target>
+      </trans-unit>
+      <trans-unit id="3cc196a35375c7826d1c5464d6017a5c" approved="yes">
+        <source>The most specific rule wins: product, then category, then page, then the whole site. When a protection and an exclusion apply at the same level, the protection wins.</source>
+        <target state="final">La règle la plus précise l'emporte : produit, puis catégorie, puis page, puis tout le site. Si une protection et une exclusion s'appliquent au même niveau, la protection l'emporte.</target>
+      </trans-unit>
+      <trans-unit id="9c9f0fb1f4fe5775b7b02ebe6ec8c890" approved="yes">
+        <source>Protect the whole site</source>
+        <target state="final">Protéger tout le site</target>
+      </trans-unit>
+      <trans-unit id="22473795dd11cf737f01acfc422ea436" approved="yes">
+        <source>Protected products</source>
+        <target state="final">Produits protégés</target>
+      </trans-unit>
+      <trans-unit id="e8a9f88da7fb7fb5ffc20ed0958f21a8" approved="yes">
+        <source>Excluded products</source>
+        <target state="final">Produits exclus</target>
+      </trans-unit>
+      <trans-unit id="e7f379f99bced4ab6f2443b7aff7bd92" approved="yes">
+        <source>Protected categories</source>
+        <target state="final">Catégories protégées</target>
+      </trans-unit>
+      <trans-unit id="36359547b09bdb31f46c419a0bd5807e" approved="yes">
+        <source>Excluded categories</source>
+        <target state="final">Catégories exclues</target>
+      </trans-unit>
+      <trans-unit id="8bd833028662c930572538ddd43d4a97" approved="yes">
+        <source>Apply category rules to subcategories</source>
+        <target state="final">Appliquer les règles de catégorie aux sous-catégories</target>
+      </trans-unit>
+      <trans-unit id="fea82a94b703b974c723cc5c95cb8c45" approved="yes">
+        <source>Protected CMS pages</source>
+        <target state="final">Pages CMS protégées</target>
+      </trans-unit>
+      <trans-unit id="788c21293fb7cd65864f20070bca1d5b" approved="yes">
+        <source>Excluded CMS pages</source>
+        <target state="final">Pages CMS exclues</target>
+      </trans-unit>
+      <trans-unit id="1468a48d686ecdc39deb3954a31d1f68" approved="yes">
+        <source>Protected controllers</source>
+        <target state="final">Contrôleurs protégés</target>
+      </trans-unit>
+      <trans-unit id="999492425f2651cca03f6d5a05a81687" approved="yes">
+        <source>One per line, e.g. manufacturer or module-mymodule-display.</source>
+        <target state="final">Un par ligne, par ex. manufacturer ou module-mymodule-display.</target>
+      </trans-unit>
+      <trans-unit id="87ce38891381f63f1d3c4482f333c27b" approved="yes">
+        <source>Excluded controllers</source>
+        <target state="final">Contrôleurs exclus</target>
+      </trans-unit>
+      <trans-unit id="3b2b1fece64a2aaeeded6a9e836b94a5" approved="yes">
+        <source>Protected URLs</source>
+        <target state="final">URL protégées</target>
+      </trans-unit>
+      <trans-unit id="dc591a63234de166c0bd407bcbc5d37f" approved="yes">
+        <source>One path per line, without the language prefix. Use * as a wildcard, e.g. /promo/*.</source>
+        <target state="final">Un chemin par ligne, sans le préfixe de langue. Utilisez * comme joker, par ex. /promo/*.</target>
+      </trans-unit>
+      <trans-unit id="55c972bacc0a249e376a56370db701f3" approved="yes">
+        <source>Excluded URLs</source>
+        <target state="final">URL exclues</target>
+      </trans-unit>
+      <trans-unit id="b9987a246a537f4fe86f1f2e3d10dbdb" approved="yes">
+        <source>Display</source>
+        <target state="final">Affichage</target>
+      </trans-unit>
+      <trans-unit id="879682659cf6ae93e4466d02b612f172" approved="yes">
+        <source>Protected pages show</source>
+        <target state="final">Les pages protégées affichent</target>
+      </trans-unit>
+      <trans-unit id="c05a45d02f2da8839fc343b635b62ae4" approved="yes">
+        <source>A verification page instead of the content (not indexed by search engines)</source>
+        <target state="final">Une page de vérification à la place du contenu (non indexée par les moteurs de recherche)</target>
+      </trans-unit>
+      <trans-unit id="50f184fa88a2e2f5037b9f3c0ce046ac" approved="yes">
+        <source>The page blurred behind a verification window (content stays indexable)</source>
+        <target state="final">La page floutée derrière une fenêtre de vérification (le contenu reste indexable)</target>
+      </trans-unit>
+      <trans-unit id="3a9ef88f2d480533dca09f6d21bb059f" approved="yes">
+        <source>The cart and checkout always use the verification page.</source>
+        <target state="final">Le panier et la commande utilisent toujours la page de vérification.</target>
+      </trans-unit>
+      <trans-unit id="3c1e29a7c3a59776a7d841def5c67753" approved="yes">
+        <source>Open the verification</source>
+        <target state="final">Ouvrir la vérification</target>
+      </trans-unit>
+      <trans-unit id="e4d2f3266d00fcc8979fd57263267aa0" approved="yes">
+        <source>In a window on top of the shop</source>
+        <target state="final">Dans une fenêtre au-dessus de la boutique</target>
+      </trans-unit>
+      <trans-unit id="8c18a8c03f65b0ca07b386a821fc85c0" approved="yes">
+        <source>On the ProofAge page, then come back</source>
+        <target state="final">Sur la page ProofAge, puis retour à la boutique</target>
+      </trans-unit>
+      <trans-unit id="b78a3223503896721cca1303f776159b" approved="yes">
+        <source>Title</source>
+        <target state="final">Titre</target>
+      </trans-unit>
+      <trans-unit id="b5a7adde1af5c87d7fd797b6245c2a39" approved="yes">
+        <source>Description</source>
+        <target state="final">Description</target>
+      </trans-unit>
+      <trans-unit id="87b7760f14fbff78d8819291f36ab9a0" approved="yes">
+        <source>Button</source>
+        <target state="final">Bouton</target>
+      </trans-unit>
+      <trans-unit id="b07cc2801693b2e722906a3db3d9c447" approved="yes">
+        <source>Validity</source>
+        <target state="final">Validité</target>
+      </trans-unit>
+      <trans-unit id="9a53608c33993f1ee7cd7714e8f8c0e9" approved="yes">
+        <source>Guests stay verified for</source>
+        <target state="final">Les visiteurs restent vérifiés pendant</target>
+      </trans-unit>
+      <trans-unit id="73cdddd7730abfc13a55efb9f5685a3b" approved="yes">
+        <source>hours</source>
+        <target state="final">heures</target>
+      </trans-unit>
+      <trans-unit id="84ded1341d589ecaca58dd11036bc0cd" approved="yes">
+        <source>From 1 to 720 hours.</source>
+        <target state="final">De 1 à 720 heures.</target>
+      </trans-unit>
+      <trans-unit id="b2fb7aacd98066a409feec5428aa1620" approved="yes">
+        <source>Customer accounts stay verified for</source>
+        <target state="final">Les comptes clients restent vérifiés pendant</target>
+      </trans-unit>
+      <trans-unit id="44fdec47036f482b68b748f9d786801b" approved="yes">
+        <source>days</source>
+        <target state="final">jours</target>
+      </trans-unit>
+      <trans-unit id="fae5227dba5a84c2307f9bb2e4c14dde" approved="yes">
+        <source>0 means the verification never expires.</source>
+        <target state="final">0 signifie que la vérification n'expire jamais.</target>
+      </trans-unit>
+      <trans-unit id="c9dabe415ea92f18e527c1a2a6dab79e" approved="yes">
+        <source>Save your public and secret keys first.</source>
+        <target state="final">Enregistrez d'abord vos clés publique et secrète.</target>
+      </trans-unit>
+      <trans-unit id="0b8764d3dc1a8f0ba45f7ab682e65766" approved="yes">
+        <source>Webhook URL</source>
+        <target state="final">URL du webhook</target>
+      </trans-unit>
+      <trans-unit id="5fb63579fc981698f97d55bfecb213ea" approved="yes">
+        <source>Copy</source>
+        <target state="final">Copier</target>
+      </trans-unit>
+      <trans-unit id="4c469b65d80a08db60b1a7a267b96389" approved="yes">
+        <source>Paste this URL into the webhook settings of your ProofAge workspace.</source>
+        <target state="final">Collez cette URL dans les paramètres de webhook de votre espace de travail ProofAge.</target>
+      </trans-unit>
+      <trans-unit id="39838db537c95bc8df810c5601601d5b" approved="yes">
+        <source>Test connection</source>
+        <target state="final">Tester la connexion</target>
+      </trans-unit>
+      <trans-unit id="808b7dc6a569b02ca82ca1e3eb2b6d37" approved="yes">
+        <source>The check type, minimum age and wallet option are set in your ProofAge workspace, not here.</source>
+        <target state="final">Le type de vérification, l'âge minimum et l'option portefeuille d'identité numérique se configurent dans votre espace de travail ProofAge, pas ici.</target>
+      </trans-unit>
+      <trans-unit id="4f6e1d7cfae0c309668dcad8f155a6a9" approved="yes">
+        <source>Search a product by name or reference</source>
+        <target state="final">Rechercher un produit par nom ou référence</target>
+      </trans-unit>
+      <trans-unit id="1063e38cb53d94d386f21227fcd84717" approved="yes">
+        <source>Remove</source>
+        <target state="final">Retirer</target>
+      </trans-unit>
+      <trans-unit id="63f0167e097f8651427ce5f948a3048d" approved="yes">
+        <source>Recent verifications</source>
+        <target state="final">Vérifications récentes</target>
+      </trans-unit>
+      <trans-unit id="268e85b916332794a8bb8c70503048b5" approved="yes">
+        <source>Verification ID</source>
+        <target state="final">ID de vérification</target>
+      </trans-unit>
+      <trans-unit id="ec53a8c4f07baed5d8825072c89799be" approved="yes">
+        <source>Status</source>
+        <target state="final">Statut</target>
+      </trans-unit>
+      <trans-unit id="4c3880bb027f159e801041b1021e88e8" approved="yes">
+        <source>Method</source>
+        <target state="final">Méthode</target>
+      </trans-unit>
+      <trans-unit id="ce26601dac0dea138b7295f02b7620a7" approved="yes">
+        <source>Customer</source>
+        <target state="final">Client</target>
+      </trans-unit>
+      <trans-unit id="0eceeb45861f9585dd7a97a3e36f85c6" approved="yes">
+        <source>Created</source>
+        <target state="final">Créée</target>
+      </trans-unit>
+      <trans-unit id="e63e9ee14dec70817a94b4eaaeed0393" approved="yes">
+        <source>Decided</source>
+        <target state="final">Décidée</target>
+      </trans-unit>
+      <trans-unit id="adb831a7fdd83dd1e2a309ce7591dff8" approved="yes">
+        <source>Guest</source>
+        <target state="final">Visiteur</target>
+      </trans-unit>
+      <trans-unit id="570dff9f6dc4777a61b47f01231f110f" approved="yes">
+        <source>No verifications yet.</source>
+        <target state="final">Aucune vérification pour le moment.</target>
+      </trans-unit>
+      <trans-unit id="87e95bdd5347424c3a9db05098455021" approved="yes">
+        <source>Recent webhook deliveries</source>
+        <target state="final">Livraisons de webhook récentes</target>
+      </trans-unit>
+      <trans-unit id="3c24226de4304188db36ab51c73e4122" approved="yes">
+        <source>Delivery ID</source>
+        <target state="final">ID de livraison</target>
+      </trans-unit>
+      <trans-unit id="27045fda1d042dbf633b2a80d3a0c083" approved="yes">
+        <source>Received (UTC)</source>
+        <target state="final">Reçue (UTC)</target>
+      </trans-unit>
+      <trans-unit id="9e5c68931b37435eff178bb9d6628120" approved="yes">
+        <source>No webhook received yet.</source>
+        <target state="final">Aucun webhook reçu pour le moment.</target>
+      </trans-unit>
+      <trans-unit id="3caaa1cf18e776d22d44ba571d38257f" approved="yes">
+        <source>Age verification (ProofAge)</source>
+        <target state="final">Vérification de l'âge (ProofAge)</target>
+      </trans-unit>
+      <trans-unit id="4b83a6c8320afcc1b5a5baf558f26aad" approved="yes">
+        <source>No verification data for this order.</source>
+        <target state="final">Aucune donnée de vérification pour cette commande.</target>
+      </trans-unit>
+      <trans-unit id="bb8abab9e78a856b4e7f1ade1db9a5cc" approved="yes">
+        <source>Not required for the products in this order.</source>
+        <target state="final">Non requise pour les produits de cette commande.</target>
+      </trans-unit>
+      <trans-unit id="6f8063417ab31f38d864c28302f3de2f" approved="yes">
+        <source>Approved</source>
+        <target state="final">Approuvée</target>
+      </trans-unit>
+      <trans-unit id="a40c6fb7b8f80f970cdece775f6669db" approved="yes">
+        <source>Approval revoked after the order</source>
+        <target state="final">Approbation révoquée après la commande</target>
+      </trans-unit>
+      <trans-unit id="ecddbd73a90aaf17dd71134521b09079" approved="yes">
+        <source>Not verified</source>
+        <target state="final">Non vérifiée</target>
+      </trans-unit>
+      <trans-unit id="86b4added63d0d55058a71f45e99719e" approved="yes">
+        <source>Digital identity wallet</source>
+        <target state="final">Portefeuille d'identité numérique</target>
+      </trans-unit>
+      <trans-unit id="9c36bc458d9dde717ca535eb55f4173a" approved="yes">
+        <source>Face or document</source>
+        <target state="final">Visage ou document</target>
+      </trans-unit>
+      <trans-unit id="f3b51254827bd09f30accc598f65d682" approved="yes">
+        <source>Verified at</source>
+        <target state="final">Vérifiée le</target>
+      </trans-unit>
+      <trans-unit id="3f68e67dc6c397aaa9d1c24c356f754f" approved="yes">
+        <source>Verified</source>
+        <target state="final">Vérifiée</target>
+      </trans-unit>
+      <trans-unit id="24fe48030f7d3097d5882535b04c3fa8" approved="yes">
+        <source>Expired</source>
+        <target state="final">Expirée</target>
+      </trans-unit>
+      <trans-unit id="cfc36842a01da69c484ffdcc6782f437" approved="yes">
+        <source>Expires</source>
+        <target state="final">Expire le</target>
+      </trans-unit>
+      <trans-unit id="6e7b34fa59e1bd229b207892956dc41c" approved="yes">
+        <source>Never</source>
+        <target state="final">Jamais</target>
+      </trans-unit>
+      <trans-unit id="54e90ca0190206194d1ba8034fc64ce4" approved="yes">
+        <source>Reset verification</source>
+        <target state="final">Réinitialiser la vérification</target>
+      </trans-unit>
+      <trans-unit id="d699c104224fb07f1016a39e266e39c5" approved="yes">
+        <source>This customer has not been verified.</source>
+        <target state="final">Ce client n'a pas été vérifié.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

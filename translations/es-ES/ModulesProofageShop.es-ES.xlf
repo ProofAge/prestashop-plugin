@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="proofage" source-language="en" target-language="es" datatype="plaintext">
+    <body>
+      <trans-unit id="309cdf82c450f42fa1fb869b13d58446" approved="yes">
+        <source>Starting verification…</source>
+        <target state="final">Iniciando la verificación…</target>
+      </trans-unit>
+      <trans-unit id="6d4a131460575e8cc6d07055473db40f" approved="yes">
+        <source>Complete the verification in the window that opened.</source>
+        <target state="final">Completa la verificación en la ventana que se ha abierto.</target>
+      </trans-unit>
+      <trans-unit id="7d4a9baf72b11d3c3524742e871c364d" approved="yes">
+        <source>Checking your verification…</source>
+        <target state="final">Comprobando tu verificación…</target>
+      </trans-unit>
+      <trans-unit id="b2b1b751c6d7cb9507629c28f58e99e2" approved="yes">
+        <source>Your verification is being reviewed. You can close this page: the result will be applied on your next visit.</source>
+        <target state="final">Tu verificación está en revisión. Puedes cerrar esta página: el resultado se aplicará en tu próxima visita.</target>
+      </trans-unit>
+      <trans-unit id="d935c2261684d46a3996634c7fa8d585" approved="yes">
+        <source>Your verification is still in progress. Click the button to continue it.</source>
+        <target state="final">Tu verificación sigue en curso. Haz clic en el botón para continuarla.</target>
+      </trans-unit>
+      <trans-unit id="363c5891f527e604e9c230ff1480442c" approved="yes">
+        <source>Verification approved. Redirecting…</source>
+        <target state="final">Verificación aprobada. Redirigiendo…</target>
+      </trans-unit>
+      <trans-unit id="9868ab8198efed150b21cb0232506c22" approved="yes">
+        <source>Your verification was declined. You can try again.</source>
+        <target state="final">Tu verificación ha sido rechazada. Puedes intentarlo de nuevo.</target>
+      </trans-unit>
+      <trans-unit id="3513794b116ba42f760d0959112b75c2" approved="yes">
+        <source>We need you to retake a photo or document. Click the button to continue.</source>
+        <target state="final">Necesitamos que repitas una foto o un documento. Haz clic en el botón para continuar.</target>
+      </trans-unit>
+      <trans-unit id="f0ba8ef2ac978f54606d931d76491681" approved="yes">
+        <source>Your previous verification has expired. Please start again.</source>
+        <target state="final">Tu verificación anterior ha caducado. Vuelve a empezar.</target>
+      </trans-unit>
+      <trans-unit id="73017af847d89bcf704f058722652b30" approved="yes">
+        <source>Too many attempts. Please try again later.</source>
+        <target state="final">Demasiados intentos. Inténtalo de nuevo más tarde.</target>
+      </trans-unit>
+      <trans-unit id="e450ccf003c66c95a49359e40e808e45" approved="yes">
+        <source>The verification could not be started. Please try again later.</source>
+        <target state="final">No se ha podido iniciar la verificación. Inténtalo de nuevo más tarde.</target>
+      </trans-unit>
+      <trans-unit id="5877c0f39feef1dc18e7d852d63a6012" approved="yes">
+        <source>Verification requires a secure (HTTPS) connection.</source>
+        <target state="final">La verificación requiere una conexión segura (HTTPS).</target>
+      </trans-unit>
+      <trans-unit id="e0aafaf4540dc7ca1387cbb8d3693ae7" approved="yes">
+        <source>Please enable JavaScript to verify your age.</source>
+        <target state="final">Activa JavaScript para verificar tu edad.</target>
+      </trans-unit>
+      <trans-unit id="692fcc78f32e00ea6f610d6157c269e7" approved="yes">
+        <source>Verification not found</source>
+        <target state="final">Verificación no encontrada</target>
+      </trans-unit>
+      <trans-unit id="300225ee958b6350abc51805dab83c24" approved="yes">
+        <source>Continue shopping</source>
+        <target state="final">Seguir comprando</target>
+      </trans-unit>
+      <trans-unit id="414457ca537810188ef48990cbeb13b3" approved="yes">
+        <source>We could not confirm your verification in this browser</source>
+        <target state="final">No hemos podido confirmar tu verificación en este navegador</target>
+      </trans-unit>
+      <trans-unit id="494915d1271b2e181f4769622fc2994d" approved="yes">
+        <source>Please make sure cookies are enabled, then start the verification again from the same browser.</source>
+        <target state="final">Asegúrate de que las cookies estén activadas y vuelve a iniciar la verificación desde el mismo navegador.</target>
+      </trans-unit>
+      <trans-unit id="ebe329457cc5fe52dac0cab7b5f9d13a" approved="yes">
+        <source>Back to the shop</source>
+        <target state="final">Volver a la tienda</target>
+      </trans-unit>
+      <trans-unit id="fa2e9407869e69ffb1ab51aebd7f60d2" approved="yes">
+        <source>Continue verification</source>
+        <target state="final">Continuar la verificación</target>
+      </trans-unit>
+      <trans-unit id="6a95cd58b3bb167bef63a585828ae686" approved="yes">
+        <source>Age verification is required to add this product to your cart.</source>
+        <target state="final">Debes verificar tu edad para añadir este producto al carrito.</target>
+      </trans-unit>
+      <trans-unit id="efeb01663a959e5619a9b46315fd7922" approved="yes">
+        <source>Age verification is required to view this product.</source>
+        <target state="final">Debes verificar tu edad para ver este producto.</target>
+      </trans-unit>
+      <trans-unit id="a2c9843da63f0e67bb61ab8d267a442d" approved="yes">
+        <source>Age verification is required to order the products in your cart.</source>
+        <target state="final">Debes verificar tu edad para realizar el pedido de los productos de tu carrito.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
