@@ -9,18 +9,20 @@ final class UrlsTest extends TestCase
 {
     public function testSdkLoaderUrl(): void
     {
-        self::assertSame('https://app.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.proofage.xyz'));
-        self::assertSame('https://app.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.proofage.xyz/'));
-        self::assertSame('https://app.staging.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.staging.proofage.xyz'));
-        self::assertSame('https://app.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('http://127.0.0.1:8765'));
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.proofage.net'));
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.proofage.net/'));
+        self::assertSame('https://app.staging.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.staging.proofage.net'));
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('http://127.0.0.1:8765'));
+        // The former domain is no longer trusted for the SDK: fall back to the official loader.
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.staging.proofage.xyz'));
     }
 
     public function testSdkLoaderUrlRejectsMaliciousHosts(): void
     {
         // Reject hosts without proper dot boundary
-        self::assertSame('https://app.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.evilproofage.xyz'));
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.evilproofage.net'));
         // Reject hosts with invalid prefix
-        self::assertSame('https://app.proofage.xyz/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.x-proofage.xyz'));
+        self::assertSame('https://app.proofage.net/sdk-build/kyc-loader.js', Urls::sdkLoaderUrl('https://api.x-proofage.net'));
     }
 
     public function testSafeRedirects(): void

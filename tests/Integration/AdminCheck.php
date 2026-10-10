@@ -14,7 +14,7 @@ return [
         $errors = proofage_form()->save([
             Settings::PUBLIC_KEY => 'pk_test_abc',
             Settings::SECRET_KEY => 'sk_test_def',
-            Settings::API_URL => 'https://api.proofage.xyz/',
+            Settings::API_URL => 'https://api.proofage.net/',
             Settings::SITE_WIDE => '1',
             Settings::PROTECT_PRODUCTS => '[3,"5",0]',
             Settings::PROTECT_CATEGORIES => ['4', '6'],
@@ -29,7 +29,7 @@ return [
         ]);
         check($errors === [], implode('; ', $errors));
         $s = new Settings(1);
-        check($s->secretKey() === 'sk_test_def' && $s->apiUrl() === 'https://api.proofage.xyz', 'keys');
+        check($s->secretKey() === 'sk_test_def' && $s->apiUrl() === 'https://api.proofage.net', 'keys');
         check($s->getList(Settings::PROTECT_PRODUCTS) === [3, 5], 'products ' . json_encode($s->getList(Settings::PROTECT_PRODUCTS)));
         check($s->getList(Settings::PROTECT_CONTROLLERS) === ['manufacturer'], 'controllers');
         check($s->displayMode() === 'overlay' && $s->launchMode() === 'modal', 'modes');

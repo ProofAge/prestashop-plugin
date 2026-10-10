@@ -43,7 +43,7 @@ final class Settings
     public const GUEST_TTL_HOURS = 'PROOFAGE_GUEST_TTL_HOURS';
     public const CUSTOMER_TTL_DAYS = 'PROOFAGE_CUSTOMER_TTL_DAYS';
 
-    public const DEFAULT_API_URL = 'https://api.proofage.xyz';
+    public const DEFAULT_API_URL = 'https://api.proofage.net';
 
     public const LIST_KEYS = [
         self::PROTECT_PRODUCTS, self::EXCLUDE_PRODUCTS, self::PROTECT_CATEGORIES, self::EXCLUDE_CATEGORIES,

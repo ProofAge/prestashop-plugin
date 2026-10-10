@@ -68,7 +68,7 @@ final class VerificationServiceTest extends TestCase
 
         self::assertFalse($result->reused);
         self::assertSame('ver-1', $result->verificationId);
-        self::assertSame('https://idv.proofage.xyz/v/ver-1', $result->url);
+        self::assertSame('https://idv.proofage.net/v/ver-1', $result->url);
         self::assertMatchesRegularExpression('/^[0-9a-f]{64}$/', (string) $result->newToken);
 
         $payload = $this->api->created[0];

@@ -30,7 +30,7 @@ return [
             $r->sessionTokenHash = hash('sha256', 'x');
             $r->ipHash = hash('sha256', 'ip-' . $idCustomer);
             $r->returnRef = bin2hex(random_bytes(16));
-            $r->verificationUrl = 'https://idv.proofage.xyz/v/x';
+            $r->verificationUrl = 'https://idv.proofage.net/v/x';
             $r->createdAt = $r->updatedAt = time();
             ServiceFactory::forShop(1)->verifications()->insert($r);
         };
@@ -66,7 +66,7 @@ return [
         $r->sessionTokenHash = hash('sha256', 'tok-reset');
         $r->ipHash = 'x';
         $r->returnRef = bin2hex(random_bytes(16));
-        $r->verificationUrl = 'https://idv.proofage.xyz/v/x';
+        $r->verificationUrl = 'https://idv.proofage.net/v/x';
         $r->status = 'approved';
         $r->decidedAt = $now - 60;
         $r->expiresAt = $now + 86400;

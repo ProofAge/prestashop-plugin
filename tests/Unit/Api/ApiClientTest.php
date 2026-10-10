@@ -13,15 +13,15 @@ final class ApiClientTest extends TestCase
 {
     public function testCreateVerificationSendsSignedJson(): void
     {
-        $transport = new RecordingTransport(new HttpResponse(201, '{"id":"v-1","url":"https://idv.proofage.xyz/v/x","status":"created"}'));
-        $client = new ApiClient($transport, 'https://api.proofage.xyz/', 'pk_test_1', new RequestSigner('sk_test_abc'));
+        $transport = new RecordingTransport(new HttpResponse(201, '{"id":"v-1","url":"https://idv.proofage.net/v/x","status":"created"}'));
+        $client = new ApiClient($transport, 'https://api.proofage.net/', 'pk_test_1', new RequestSigner('sk_test_abc'));
 
         $result = $client->createVerification(['external_id' => 'ps-1-c42', 'callback_url' => 'https://shop.test/return?ref=a/b']);
 
         self::assertSame('v-1', $result['id']);
         $request = $transport->requests[0];
         self::assertSame('POST', $request['method']);
-        self::assertSame('https://api.proofage.xyz/v1/verifications', $request['url']);
+        self::assertSame('https://api.proofage.net/v1/verifications', $request['url']);
         self::assertSame('{"external_id":"ps-1-c42","callback_url":"https://shop.test/return?ref=a/b"}', $request['body']);
         self::assertSame('pk_test_1', $request['headers']['X-API-Key']);
         self::assertSame('application/json', $request['headers']['Content-Type']);
@@ -34,7 +34,7 @@ final class ApiClientTest extends TestCase
     public function testUnwrapsDataEnvelope(): void
     {
         $transport = new RecordingTransport(new HttpResponse(200, '{"data":{"id":"v-2","status":"review"}}'));
-        $client = new ApiClient($transport, 'https://api.proofage.xyz', 'pk', new RequestSigner('sk'));
+        $client = new ApiClient($transport, 'https://api.proofage.net', 'pk', new RequestSigner('sk'));
 
         self::assertSame(['id' => 'v-2', 'status' => 'review'], $client->getVerification('v-2'));
     }
@@ -42,13 +42,13 @@ final class ApiClientTest extends TestCase
     public function testGetVerificationSignsPathWithEmptyBody(): void
     {
         $transport = new RecordingTransport(new HttpResponse(200, '{"id":"v 3"}'));
-        $client = new ApiClient($transport, 'https://api.proofage.xyz', 'pk', new RequestSigner('sk'));
+        $client = new ApiClient($transport, 'https://api.proofage.net', 'pk', new RequestSigner('sk'));
 
         $client->getVerification('v 3');
 
         $request = $transport->requests[0];
         self::assertSame('GET', $request['method']);
-        self::assertSame('https://api.proofage.xyz/v1/verifications/v%203', $request['url']);
+        self::assertSame('https://api.proofage.net/v1/verifications/v%203', $request['url']);
         self::assertSame('', $request['body']);
         self::assertArrayNotHasKey('Content-Type', $request['headers']);
         self::assertSame((new RequestSigner('sk'))->sign('GET', '/v1/verifications/v%203', ''), $request['headers']['X-HMAC-Signature']);
@@ -68,7 +68,7 @@ final class ApiClientTest extends TestCase
     public function testErrorResponseThrowsWithStatusAndCode(): void
     {
         $transport = new RecordingTransport(new HttpResponse(402, '{"code":"PAYMENT_METHOD_REQUIRED","message":"Add a payment method"}'));
-        $client = new ApiClient($transport, 'https://api.proofage.xyz', 'pk', new RequestSigner('sk'));
+        $client = new ApiClient($transport, 'https://api.proofage.net', 'pk', new RequestSigner('sk'));
 
         try {
             $client->createVerification([]);
@@ -83,7 +83,7 @@ final class ApiClientTest extends TestCase
     public function testNonJsonSuccessThrows(): void
     {
         $transport = new RecordingTransport(new HttpResponse(200, '<html>'));
-        $client = new ApiClient($transport, 'https://api.proofage.xyz', 'pk', new RequestSigner('sk'));
+        $client = new ApiClient($transport, 'https://api.proofage.net', 'pk', new RequestSigner('sk'));
 
         $this->expectException(ApiException::class);
         $client->getWorkspace();

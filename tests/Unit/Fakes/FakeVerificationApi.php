@@ -24,7 +24,7 @@ class FakeVerificationApi implements VerificationApi
         $id = 'ver-' . ++$this->sequence;
         $this->remote[$id] = ['id' => $id, 'external_id' => $payload['external_id'], 'status' => 'created'];
 
-        return ['id' => $id, 'url' => 'https://idv.proofage.xyz/v/' . $id, 'status' => 'created'];
+        return ['id' => $id, 'url' => 'https://idv.proofage.net/v/' . $id, 'status' => 'created'];
     }
 
     public function getVerification(string $verificationId): array

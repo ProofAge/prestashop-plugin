@@ -1,5 +1,5 @@
 <?php
-// Local stand-in for api.proofage.xyz used by integration checks.
+// Local stand-in for api.proofage.net used by integration checks.
 // Run: php -S 127.0.0.1:8765 tests/Fixtures/fake-proofage-api.php
 $secret = getenv('FAKE_SK') ?: 'sk_test_fake';
 $dir = sys_get_temp_dir() . '/proofage-fake-api';

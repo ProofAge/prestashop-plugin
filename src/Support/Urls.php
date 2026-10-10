@@ -15,7 +15,7 @@ if (!defined('_PS_VERSION_')) {
 
 final class Urls
 {
-    public const DEFAULT_SDK_LOADER = 'https://app.proofage.xyz/sdk-build/kyc-loader.js';
+    public const DEFAULT_SDK_LOADER = 'https://app.proofage.net/sdk-build/kyc-loader.js';
 
     public static function sdkLoaderUrl(string $apiUrl): string
     {
@@ -25,7 +25,7 @@ final class Urls
         }
 
         $host = (string) parse_url($apiUrl, PHP_URL_HOST);
-        if (!preg_match('/^api\.((?:[a-z0-9-]+\.)*proofage\.xyz)$/i', $host, $m)) {
+        if (!preg_match('/^api\.((?:[a-z0-9-]+\.)*proofage\.net)$/i', $host, $m)) {
             return self::DEFAULT_SDK_LOADER;
         }
 

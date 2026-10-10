@@ -64,7 +64,7 @@ sequenceDiagram
 - PrestaShop **8.1 – 9.x**
 - PHP **7.2.5+** with cURL
 - An **HTTPS** storefront
-- A **[ProofAge](https://proofage.xyz) account** — verifications are billed by ProofAge
+- A **[ProofAge](https://proofage.net) account** — verifications are billed by ProofAge
 
 ## Installation
 
@@ -113,7 +113,7 @@ Every order and customer page shows a verification card; **Reset verification** 
 <details>
 <summary><b>Do I need a ProofAge account?</b></summary>
 
-Yes. The module connects your shop to your ProofAge workspace, where verifications run and are billed. Create an account at [proofage.xyz](https://proofage.xyz).
+Yes. The module connects your shop to your ProofAge workspace, where verifications run and are billed. Create an account at [proofage.net](https://proofage.net).
 </details>
 
 <details>

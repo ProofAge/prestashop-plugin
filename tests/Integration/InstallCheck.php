@@ -35,7 +35,7 @@ return [
         $r->sessionTokenHash = hash('sha256', 't');
         $r->ipHash = hash('sha256', 'ip');
         $r->returnRef = bin2hex(random_bytes(16));
-        $r->verificationUrl = 'https://idv.proofage.xyz/v/x';
+        $r->verificationUrl = 'https://idv.proofage.net/v/x';
         $r->originUrl = '/';
         $r->createdAt = $r->updatedAt = time();
         $r->expiresAt = time() + 3600;

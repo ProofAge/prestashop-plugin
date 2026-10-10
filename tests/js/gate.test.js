@@ -45,7 +45,7 @@ function load(statuses) {
     fetch: (url) => {
       fetches.push(url);
       if (url === '/session') {
-        return json({ verification_id: 'v1', url: 'https://idv.proofage.xyz/v/x', launch_mode: 'modal' });
+        return json({ verification_id: 'v1', url: 'https://idv.proofage.net/v/x', launch_mode: 'modal' });
       }
       return json(statuses.shift() || { state: 'pending', status: 'started' });
     },
