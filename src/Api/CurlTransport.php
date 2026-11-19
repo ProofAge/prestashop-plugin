@@ -34,6 +34,7 @@ final class CurlTransport implements HttpTransport
             $lines[] = $name . ': ' . $value;
         }
 
+        $responseHeaders = [];
         $handle = curl_init($url);
         if ($handle === false) {
             throw new ApiException('Could not initialise cURL', 0, null);
@@ -46,6 +47,14 @@ final class CurlTransport implements HttpTransport
             CURLOPT_CONNECTTIMEOUT => $this->timeoutSeconds,
             CURLOPT_USERAGENT => $this->userAgent,
             CURLOPT_FOLLOWLOCATION => false,
+            CURLOPT_HEADERFUNCTION => static function ($curl, $line) use (&$responseHeaders) {
+                $colon = strpos($line, ':');
+                if ($colon !== false && $colon > 0) {
+                    $responseHeaders[strtolower(trim(substr($line, 0, $colon)))] = trim(substr($line, $colon + 1));
+                }
+
+                return strlen($line);
+            },
         ]);
         if ($body !== '') {
             curl_setopt($handle, CURLOPT_POSTFIELDS, $body);
@@ -61,6 +70,6 @@ final class CurlTransport implements HttpTransport
             throw new ApiException('Could not reach the ProofAge API: ' . $error, 0, null);
         }
 
-        return new HttpResponse($status, (string) $raw);
+        return new HttpResponse($status, (string) $raw, $responseHeaders);
     }
 }

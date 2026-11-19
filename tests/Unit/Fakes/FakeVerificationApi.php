@@ -15,7 +15,7 @@ class FakeVerificationApi implements VerificationApi
     public int $getCalls = 0;
     private int $sequence = 0;
 
-    public function createVerification(array $payload): array
+    public function createVerification(array $payload, ?string $idempotencyKey = null): array
     {
         if ($this->failWith) {
             throw $this->failWith;

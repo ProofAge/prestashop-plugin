@@ -17,10 +17,11 @@ interface VerificationApi
 {
     /**
      * @param array<string,mixed> $payload
+     * @param string|null $idempotencyKey 1-255 printable ASCII characters; a UUID v4 is generated when null
      *
      * @return array<string,mixed>
      */
-    public function createVerification(array $payload): array;
+    public function createVerification(array $payload, ?string $idempotencyKey = null): array;
 
     /**
      * @return array<string,mixed>

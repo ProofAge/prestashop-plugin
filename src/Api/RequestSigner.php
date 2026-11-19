@@ -14,7 +14,10 @@ if (!defined('_PS_VERSION_')) {
 }
 
 /**
- * Signs ProofAge API requests: hex(hmac_sha256(METHOD + path[?query] + rawBody, secret)).
+ * Signs ProofAge API requests: hex(hmac_sha256(canonical, secret)).
+ *
+ * The legacy canonical string is METHOD + path[?query] + rawBody. When the request also carries
+ * an X-Timestamp header (Unix seconds), the canonical string is "{timestamp}." + the legacy one.
  */
 final class RequestSigner
 {
@@ -28,6 +31,24 @@ final class RequestSigner
 
     public function sign(string $method, string $pathWithQuery, string $body): string
     {
-        return hash_hmac('sha256', strtoupper($method) . $pathWithQuery . $body, $this->secretKey);
+        return hash_hmac('sha256', $this->canonical($method, $pathWithQuery, $body), $this->secretKey);
+    }
+
+    /**
+     * Signature for a request that sends the X-Timestamp header with the same $timestamp.
+     */
+    public function signWithTimestamp(string $method, string $pathWithQuery, string $body, int $timestamp): string
+    {
+        return hash_hmac('sha256', $this->canonicalWithTimestamp($method, $pathWithQuery, $body, $timestamp), $this->secretKey);
+    }
+
+    public function canonical(string $method, string $pathWithQuery, string $body): string
+    {
+        return strtoupper($method) . $pathWithQuery . $body;
+    }
+
+    public function canonicalWithTimestamp(string $method, string $pathWithQuery, string $body, int $timestamp): string
+    {
+        return $timestamp . '.' . $this->canonical($method, $pathWithQuery, $body);
     }
 }

@@ -93,7 +93,9 @@ final class ServiceFactory
                 new CurlTransport(10, 'ProofAge-PrestaShop/' . ModuleInfo::VERSION . ' PrestaShop/' . _PS_VERSION_),
                 $settings->apiUrl(),
                 $settings->publicKey(),
-                new RequestSigner($settings->secretKey())
+                new RequestSigner($settings->secretKey()),
+                $this->clock(),
+                new ConfigurationClockSkewStore()
             );
         });
     }
