@@ -53,6 +53,7 @@ final class Installer
         foreach (Settings::ALL_KEYS as $key) {
             \Configuration::deleteByName($key);
         }
+        \Configuration::deleteByName(ConfigurationClockSkewStore::KEY);
 
         return true;
     }

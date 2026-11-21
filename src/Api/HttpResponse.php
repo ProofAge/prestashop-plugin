@@ -21,9 +21,23 @@ final class HttpResponse
     /** @var string */
     public $body;
 
-    public function __construct(int $status, string $body)
+    /** @var array<string,string> response headers, lower-case names */
+    public $headers;
+
+    /**
+     * @param array<string,string> $headers
+     */
+    public function __construct(int $status, string $body, array $headers = [])
     {
         $this->status = $status;
         $this->body = $body;
+        $this->headers = array_change_key_case($headers, CASE_LOWER);
+    }
+
+    public function header(string $name): ?string
+    {
+        $name = strtolower($name);
+
+        return isset($this->headers[$name]) ? $this->headers[$name] : null;
     }
 }

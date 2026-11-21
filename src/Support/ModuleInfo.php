@@ -16,5 +16,5 @@ if (!defined('_PS_VERSION_')) {
 final class ModuleInfo
 {
     public const NAME = 'proofage';
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.1.0';
 }

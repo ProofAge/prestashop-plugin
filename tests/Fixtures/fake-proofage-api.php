@@ -17,7 +17,10 @@ function respond(int $status, array $data): void
 }
 
 if (str_starts_with($path, '/v1/')) {
-    $expected = hash_hmac('sha256', $method . $uri . $body, $secret);
+    // Like the real API: a request with X-Timestamp signs "{timestamp}." before the legacy string.
+    $timestamp = $_SERVER['HTTP_X_TIMESTAMP'] ?? null;
+    $canonical = ($timestamp !== null ? $timestamp . '.' : '') . $method . $uri . $body;
+    $expected = hash_hmac('sha256', $canonical, $secret);
     if (!hash_equals($expected, $_SERVER['HTTP_X_HMAC_SIGNATURE'] ?? '')) {
         respond(401, ['code' => 'INVALID_SIGNATURE', 'message' => 'Invalid signature']);
         return true;

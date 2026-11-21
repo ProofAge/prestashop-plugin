@@ -204,7 +204,7 @@ final class VerificationServiceTest extends TestCase
     public function testStartRejectsApiResponseWithoutUrl(): void
     {
         $api = new class extends FakeVerificationApi {
-            public function createVerification(array $payload): array
+            public function createVerification(array $payload, ?string $idempotencyKey = null): array
             {
                 return ['id' => 'x'];
             }
